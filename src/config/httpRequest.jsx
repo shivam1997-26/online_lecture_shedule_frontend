@@ -20,7 +20,14 @@ export const postRequest = async (url,data) => {
 
 export const getRequest = async (url) => {
     try {
-        const response = await axios.get(url)
+        const token = localStorage.getItem('token');
+      
+        const response = await axios.get(url,{
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            }
+        })
         return response
     }
     catch (err) {

@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import AdminMainPage from './component/admin/AdminMainPage'
 import Login from './component/auth/Login'
 import InstructorMainPage from './component/instructor/InstructorMainPage'
 
@@ -18,17 +17,14 @@ function App() {
   }, [])
   return (
     <>
-      {
-        token == false && <> <h5 className='text-center mt-4'>Login</h5>
-          <div className='container'>
-            <Login />
-          </div> </>
-      }
-      
       <Routes>
-        <Route path='/adminPanel' element={<AdminMainPage />} />
+       
         <Route path='/instructorPanel' element={<InstructorMainPage />} />
-        {/* <ProtectedRoute path="/adminDashboard" component={AdminMainPage} /> */}
+        {
+          token == false &&
+          <Route path='/' element={<Login />} />
+        }
+       
       </Routes>
 
     </>

@@ -1,9 +1,12 @@
 import React from 'react'
+import Navbar from '../shared/Navbar'
 
 const AdminMainPage = () => {
-  return (
-    <div>AdminMainPage</div>
-  )
+    return (
+        <>
+            <Navbar />
+        </>
+    )
 }
 
 export default AdminMainPage

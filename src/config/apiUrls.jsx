@@ -24,6 +24,7 @@ export const apiUrl = {
         "addLecture": `${baseUrl}/add/lecture`,
         "updateLecture": `${baseUrl}/updateLecture`,
         "deleteLecture": `${baseUrl}/deleteLecture`,
-        "getLecture": `${baseUrl}/get/allInstructorList`
+        "getLecture": `${baseUrl}/get/allInstructorList`,
+        "getaLecture":`${baseUrl}/get/lecture/instructor`
     }
 }
